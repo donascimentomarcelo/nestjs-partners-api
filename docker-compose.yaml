@@ -1,0 +1,10 @@
+services:
+  db:
+    image: mysql:8
+    container_name: partners-api
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nest
+    ports:
+      - 3307:3306
