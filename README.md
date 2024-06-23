@@ -58,6 +58,33 @@ $ yarn run test:e2e
 $ yarn run test:cov
 ```
 
+## Prisma
+
+```bash
+# create prisma schema
+$ npx prisma init
+
+# create migration
+$ npx prisma migrate dev
+```
+
+## Docker Compose
+
+```bash
+# go to container database
+$ docker compose exec db bash
+
+# login to db
+$ mysql -uroot -proot
+
+# show databases
+$ show databases;
+$ use nest;
+$ show tables;
+$ describe Event;
+
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
