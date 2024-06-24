@@ -1,0 +1,41 @@
+###
+# @name findManyEvents
+GET http://localhost:3000/events
+
+###
+# @name createEvent
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "name": "new event",
+    "description": "this is a new evet",
+    "date": "2017-01-01T00:00:00",
+    "price": 2500
+}
+
+###
+
+@eventId = {{ createEvent.response.body.id }}
+
+###
+# @name findEvent
+GET http://localhost:3000/events/{{eventId}}
+
+###
+# @name updateEvent
+PATCH  http://localhost:3000/events/{{eventId}}
+Content-Type: application/json
+
+{
+    "name": "new event",
+    "description": "this is a new evet",
+    "date": "2017-01-01T00:00:00",
+    "price": 3500
+}
+
+###
+
+###
+# @name deleteEvent
+DELETE  http://localhost:3000/events/{{eventId}}
