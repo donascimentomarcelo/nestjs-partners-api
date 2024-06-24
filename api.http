@@ -11,7 +11,7 @@ Content-Type: application/json
     "name": "new event",
     "description": "this is a new evet",
     "date": "2017-01-01T00:00:00",
-    "price": 2500
+    "price": 200
 }
 
 ###
@@ -35,7 +35,18 @@ Content-Type: application/json
 }
 
 ###
-
-###
 # @name deleteEvent
 DELETE  http://localhost:3000/events/{{eventId}}
+
+###
+# @name findManySpots
+GET http://localhost:3000/events/{{eventId}}/spots
+
+###
+# @name createSpot
+POST http://localhost:3000/events/{{eventId}}/spots
+Content-Type: application/json
+
+{
+    "name": "A2",
+}
